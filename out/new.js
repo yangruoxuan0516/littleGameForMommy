@@ -2,14 +2,22 @@ import { isEmpty, setValue } from './case.js';
 import { color } from './color.js';
 document.addEventListener("DOMContentLoaded", (event) => {
     newGame();
-    console.log("nouvelle partie lancée !");
 });
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function newGame() {
+export function newGame() {
+    for (let i = 1; i <= 4; i++) {
+        for (let j = 1; j <= 4; j++) {
+            setValue(i, j, 0);
+        }
+    }
+    const scoreElement = document.getElementById('score');
+    let score = Number(scoreElement.innerHTML);
+    score = 0;
+    scoreElement.innerHTML = score.toString();
     const i1 = getRandomInt(1, 4);
     const j1 = getRandomInt(1, 4);
     const i2 = getRandomInt(1, 4);
@@ -32,6 +40,7 @@ function newGame() {
         setValue(i2, j2, 4);
     }
     color();
+    console.log("nouvelle partie lancée !");
 }
 export function newCase() {
     let i = getRandomInt(1, 4);
@@ -46,5 +55,6 @@ export function newCase() {
     else {
         setValue(i, j, 4);
     }
+    color();
 }
 //# sourceMappingURL=new.js.map

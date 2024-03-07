@@ -4,7 +4,6 @@
 <head>
     <title>2048</title>
     <meta charset="UTF-8">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
     <link rel="stylesheet" href="style.css">
     <script type="module" src="out/case.js"></script>
     <script type="module" src="out/bonjour.js"></script>
@@ -17,9 +16,10 @@
 </head>
 
 <body>
+  <div class="container">
     <h1>2048</h1>
-    <div id="score">0</div>
-    <table>
+      <div id="score">0</div>
+      <table>
         <tr>
           <td id = 11>*</td>
           <td id = 12>*</td>
@@ -45,6 +45,18 @@
           <td id = 44>*</td>
         </tr>
       </table>
+    </div>
+
+    <dialog id="dialogWin">
+      <p>Vous avez gagné !</p>
+      <button id="rejouerWin">Rejouer</button>
+    </dialog>
+
+    <dialog id="dialogLose">
+      <p>Vous avez perdu !</p>
+      <button id="rejouerLose">Rejouer</button>
+    </dialog>
+
 </body>
 
 </html>
