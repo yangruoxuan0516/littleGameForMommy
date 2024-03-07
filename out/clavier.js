@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('keydown', (event) => {
         const scoreElement = document.getElementById('score');
         let score = Number(scoreElement.innerHTML);
-        if (event.key === 'ArrowUp') {
+        if (event.key === 'w') {
             console.log(`haut`);
             for (let i = 1; i <= 4; i++) {
                 up(i);
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 newCase();
             }
         }
-        else if (event.key === 'ArrowDown') {
+        else if (event.key === 's') {
             console.log(`bas`);
             for (let i = 1; i <= 4; i++) {
                 down(i);
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 newCase();
             }
         }
-        else if (event.key === 'ArrowLeft') {
+        else if (event.key === 'a') {
             console.log(`gauche`);
             for (let j = 1; j <= 4; j++) {
                 left(j);
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 newCase();
             }
         }
-        else if (event.key === 'ArrowRight') {
+        else if (event.key === 'd') {
             console.log(`droite`);
             for (let j = 1; j <= 4; j++) {
                 right(j);
