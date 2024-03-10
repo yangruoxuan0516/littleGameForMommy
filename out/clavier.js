@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     moved = true;
                 }
             }
-            score++;
+            if (moved) {
+                score++;
+            }
             const WIN = win();
             const LOSE = lose();
             const FULL = full();
@@ -30,7 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 ;
             }
-            score++;
+            if (moved) {
+                score++;
+            }
             const WIN = win();
             const LOSE = lose();
             const FULL = full();
@@ -47,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 ;
             }
-            score++;
+            if (moved) {
+                score++;
+            }
             const WIN = win();
             const LOSE = lose();
             const FULL = full();
@@ -64,7 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 ;
             }
-            score++;
+            if (moved) {
+                score++;
+            }
             const WIN = win();
             const LOSE = lose();
             const FULL = full();
