@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (down(i)) {
                     moved = true;
                 }
-                ;
             }
             if (moved) {
                 score++;
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (left(j)) {
                     moved = true;
                 }
-                ;
             }
             if (moved) {
                 score++;
@@ -68,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (right(j)) {
                     moved = true;
                 }
-                ;
             }
             if (moved) {
                 score++;
