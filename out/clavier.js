@@ -5,55 +5,70 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('keydown', (event) => {
         const scoreElement = document.getElementById('score');
         let score = Number(scoreElement.innerHTML);
-        if (event.key === 'w') {
+        if (event.key === 'ArrowUp') {
             console.log(`haut`);
+            let moved = false;
             for (let i = 1; i <= 4; i++) {
-                up(i);
+                if (up(i)) {
+                    moved = true;
+                }
             }
             score++;
             const WIN = win();
             const LOSE = lose();
             const FULL = full();
-            if (!FULL && !WIN && !LOSE) {
+            if (!FULL && !WIN && !LOSE && moved) {
                 newCase();
             }
         }
-        else if (event.key === 's') {
+        else if (event.key === 'ArrowDown') {
             console.log(`bas`);
+            let moved = false;
             for (let i = 1; i <= 4; i++) {
-                down(i);
+                if (down(i)) {
+                    moved = true;
+                }
+                ;
             }
             score++;
             const WIN = win();
             const LOSE = lose();
             const FULL = full();
-            if (!FULL && !WIN && !LOSE) {
+            if (!FULL && !WIN && !LOSE && moved) {
                 newCase();
             }
         }
-        else if (event.key === 'a') {
+        else if (event.key === 'ArrowLeft') {
             console.log(`gauche`);
+            let moved = false;
             for (let j = 1; j <= 4; j++) {
-                left(j);
+                if (left(j)) {
+                    moved = true;
+                }
+                ;
             }
             score++;
             const WIN = win();
             const LOSE = lose();
             const FULL = full();
-            if (!FULL && !WIN && !LOSE) {
+            if (!FULL && !WIN && !LOSE && moved) {
                 newCase();
             }
         }
-        else if (event.key === 'd') {
+        else if (event.key === 'ArrowRight') {
             console.log(`droite`);
+            let moved = false;
             for (let j = 1; j <= 4; j++) {
-                right(j);
+                if (right(j)) {
+                    moved = true;
+                }
+                ;
             }
             score++;
             const WIN = win();
             const LOSE = lose();
             const FULL = full();
-            if (!FULL && !WIN && !LOSE) {
+            if (!FULL && !WIN && !LOSE && moved) {
                 newCase();
             }
         }
