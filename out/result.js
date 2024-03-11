@@ -1,6 +1,7 @@
 import { isEmpty, getValue } from "./case.js";
 import { showDialogWin, showDialogLose } from "./modal.js";
 import { pop } from "./winning.js";
+import { handleKeyDown } from './clavier.js';
 export function full() {
     for (let i = 1; i <= 4; i++) {
         for (let j = 1; j <= 4; j++) {
@@ -23,8 +24,8 @@ export function lose() {
                 }
             }
         }
-        // window.alert('Oops c\'est la fin ! T\'as fait ' + score + ' coups :3');
         showDialogLose();
+        window.removeEventListener('keydown', handleKeyDown);
         return true;
     }
 }
@@ -37,7 +38,7 @@ export function win() {
             if (getValue(i, j) == 2048) {
                 pop();
                 showDialogWin();
-                // window.alert('Bravo t\'as gagné ! T\'as fait ' + score + ' coups :3');
+                window.removeEventListener('keydown', handleKeyDown);
                 return true;
             }
         }
