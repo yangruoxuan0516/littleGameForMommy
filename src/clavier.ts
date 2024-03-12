@@ -1,7 +1,7 @@
 import { left, right, up, down } from "./fusionMove.js";
 import { newCase } from "./new.js";
 import { full, lose, win } from "./result.js";
-import { showDialogNoMove } from "./modal.js";
+// import { showDialogNoMove } from "./modal.js";
 
 export function handleKeyDown(event: KeyboardEvent) {
   const scoreElement = document.getElementById("score");
@@ -18,8 +18,8 @@ export function handleKeyDown(event: KeyboardEvent) {
       score++;
     }
     else{
-      showDialogNoMove();
-      window.removeEventListener('keydown', handleKeyDown);
+      // showDialogNoMove();
+      // window.removeEventListener('keydown', handleKeyDown);
     }
     const WIN = win();
     const LOSE = lose();
@@ -39,8 +39,8 @@ export function handleKeyDown(event: KeyboardEvent) {
       score++;
     }    
     else{
-      showDialogNoMove();
-      window.removeEventListener('keydown', handleKeyDown);
+      // showDialogNoMove();
+      // window.removeEventListener('keydown', handleKeyDown);
     }
     const WIN = win();
     const LOSE = lose();
@@ -60,8 +60,8 @@ export function handleKeyDown(event: KeyboardEvent) {
       score++;
     }
     else{
-      showDialogNoMove();
-      window.removeEventListener('keydown', handleKeyDown);
+      // showDialogNoMove();
+      // window.removeEventListener('keydown', handleKeyDown);
     }
     const WIN = win();
     const LOSE = lose();
@@ -81,8 +81,8 @@ export function handleKeyDown(event: KeyboardEvent) {
       score++;
     }
     else{
-      showDialogNoMove();
-      window.removeEventListener('keydown', handleKeyDown);
+      // showDialogNoMove();
+      // window.removeEventListener('keydown', handleKeyDown);
     }
     const WIN = win();
     const LOSE = lose();
